@@ -1,0 +1,22 @@
+import * as React from 'react';
+import {Text, StyleSheet} from 'react-native';
+
+function EbookScreen({}) {
+  return (
+    <>
+      <Text style={styles.container}>Ebook/Audiobook Screen</Text>
+    </>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '100%',
+    marginLeft: '30%',
+  },
+});
+
+export default EbookScreen;

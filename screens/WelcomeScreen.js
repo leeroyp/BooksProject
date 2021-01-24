@@ -19,7 +19,8 @@ const WelcomeScreen  = ({navigation}) => {
       container: {
           flex: 1, 
         alignItems: 'center', 
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: '#009387'
     }
 
   })

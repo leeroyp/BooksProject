@@ -3,10 +3,17 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import MyTabs from './components/NavigationBar/MyTabs';
 
-export default function App() {
+
+ import RootStack from './screens/RootStackScreen'
+
+
+const App = () => {
   return (
     <NavigationContainer>
-      <MyTabs />
+      {/* <RootStack /> */}
+      <MyTabs/>
     </NavigationContainer>
   );
-}
+};
+
+export default App;

@@ -3,7 +3,6 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import MyTabs from './components/NavigationBar/MyTabs';
 
-import { NavigationContainer } from '@react-navigation/native';
 
  import RootStack from './screens/RootStackScreen'
 
@@ -11,7 +10,7 @@ import { NavigationContainer } from '@react-navigation/native';
 const App = () => {
   return (
     <NavigationContainer>
-      <RootStack />
+      {/* <RootStack /> */}
       <MyTabs/>
     </NavigationContainer>
   );

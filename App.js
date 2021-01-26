@@ -10,8 +10,8 @@ import MyTabs from './components/NavigationBar/MyTabs';
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <RootStack /> */}
-      <MyTabs/>
+      <RootStack />
+      {/* <MyTabs/> */}
     </NavigationContainer>
   );
 };

@@ -1,20 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import * as React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import MyTabs from './components/NavigationBar/MyTabs';
 
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -25,6 +12,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <RootStack />
+      <MyTabs/>
     </NavigationContainer>
   );
 };

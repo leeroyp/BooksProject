@@ -1,8 +1,12 @@
 import * as React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
 
 function LibraryScreen({}) {
-  return <Text style={styles.container}>Library Screen</Text>;
+  return (
+    <View style={styles.container}>
+      <Text>Library Screen</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -10,8 +14,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '100%',
-    marginLeft: '30%',
   },
 });
 

@@ -7,8 +7,8 @@ import RootStack from './screens/RootStackScreen';
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <RootStack /> */}
-      <MyTabs />
+      <RootStack />
+      {/* <MyTabs/> */}
     </NavigationContainer>
   );
 };

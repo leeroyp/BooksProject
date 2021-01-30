@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   image: {
     width: 250,
     height: 250,
+    flexDirection: 'row',
   },
 });
 

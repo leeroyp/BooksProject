@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import ImageDetail from '../EbookScreen/ImageDetail';
 
 const ImageScreen = () => {
@@ -25,7 +25,32 @@ const styles = StyleSheet.create({});
 
 export default ImageScreen;
 
-// Points to bring up -- Should we just dynamically assign images? or is it copy paste and just show 10 items
-// Styling in the image detail -- style and align both images differently
-// Folder Structure
-// Make the ebook file a reusable component
+// import React from 'react';
+// import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+// import ImageDetail from '../EbookScreen/ImageDetail';
+
+// const ImageScreen = ({results}) => {
+//   return (
+//     <View>
+//       <FlatList
+//         showsHorizontalScrollIndicator={false}
+//         data={results}
+//         keyExtractor={(results) => results.id}
+//         renderItem={({item}) => {
+//           return(
+//             <TouchableOpacity
+//             onPress={() => navigation.navigate('put the page to send user', {id:item.id})}>
+//               <ImageDetail
+//               result={item}/>
+
+//             </TouchableOpacity>
+//           )
+//         }}
+//       />
+//     </View>
+//   );
+// };
+
+// const styles = StyleSheet.create({});
+
+// export default ImageScreen;

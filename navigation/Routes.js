@@ -1,13 +1,14 @@
-import React , {useContext , useState, useEffect} from 'react';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native'
-import {AuthStack} from './AuthStack'
+import AuthStack from './AuthStack'
 
 const Routes = () => { 
-    return(
+    return (
         <NavigationContainer>
             <AuthStack/>
         </NavigationContainer>
     )
+   
 }
 
-export default Routes 
+export default Routes

@@ -2,15 +2,15 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
-import WelcomeScreen from './WelcomeScreen';
-import SignInScreen from './SignInScreen';
-import SignUpScreen from './SignUpScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
+import SignInScreen from '../screens/SignInScreen';
+import SignUpScreen from '../screens/SignUpScreen';
 
 
 const Stack = createStackNavigator();
 
 
-const RootStack = () => { 
+const AuthStack = () => { 
     return( 
         <Stack.Navigator headerMode='none'>
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
@@ -20,4 +20,4 @@ const RootStack = () => {
     )
 }
 
-export default RootStack
+export default AuthStack

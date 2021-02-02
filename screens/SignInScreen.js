@@ -13,7 +13,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome  from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-import {AuthContext} from '../components/context'
 
 
 
@@ -130,7 +129,7 @@ const updateSecureTextEntry = () => {
                 </TouchableOpacity>
       
                 <TouchableOpacity
-                  onPress={() => navigation.navigate('SignUpScreen')}
+                  onPress={() => navigation.navigate('SignUp')}
                   style={[
                     styles.signIn,
                     {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
-import ImageDetail from '../EbookScreen/ImageDetail';
+import ImageDetail from './ImageDetail';
 
 const ImageScreen = () => {
   return (

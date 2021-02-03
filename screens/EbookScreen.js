@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 
-import ImageScreen from '../EbookScreen/ImageScreen';
+import ImageScreen from '../components/EbookScreen/ImageScreen';
 
 class EbookScreen extends Component {
   state = {

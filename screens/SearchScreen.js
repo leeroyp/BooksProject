@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 
-function SearchScreen({}) {
+const SearchScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Search Screen</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

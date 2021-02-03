@@ -1,12 +1,11 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import EbookScreen from '../screens/EbookScreen';
 import SearchScreen from '../../screens/SearchScreen';
 import LibraryScreen from '../../screens/LibraryScreen';
 import ProfileScreen from '../../screens/ProfileScreen';
-
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Tab = createBottomTabNavigator();
 

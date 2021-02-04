@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   View,
   Text,
@@ -12,9 +12,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
+import {AuthContext} from '../navigation/AuthProvider';
+
 const SignInScreen = ({navigation}) => {
+  const {login} = useContext(AuthContext);
+
   const [data, setData] = React.useState({
-    username: '',
+    email: '',
     password: '',
     check_textInputChange: false,
     secureTextEntry: true,
@@ -106,7 +110,7 @@ const SignInScreen = ({navigation}) => {
           <TouchableOpacity
             style={styles.signIn}
             onPress={() => {
-              loginHandle(data.username, data.password);
+              login(data.email, data.password);
             }}>
             <LinearGradient
               colors={['#08d4c4', '#01ab9d']}
@@ -124,8 +128,8 @@ const SignInScreen = ({navigation}) => {
             </LinearGradient>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate('SignUp')}
+          {/* <TouchableOpacity
+            onPress={() => login(data.email, data.password)}
             style={[
               styles.signIn,
               {
@@ -143,7 +147,7 @@ const SignInScreen = ({navigation}) => {
               ]}>
               Sign Up{' '}
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
     </View>

@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 
-import ImageScreen from '../EbookScreen/ImageScreen';
+import ImageScreen from '../components/EbookScreen/ImageScreen';
 
 class EbookScreen extends Component {
   state = {
@@ -22,6 +28,7 @@ class EbookScreen extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.header}>Books! Books! Books!</Text>
+
         <View style={styles.innerContainer}>
           <TouchableOpacity
             style={styles.button}
@@ -52,7 +59,9 @@ class EbookScreen extends Component {
             </Text>
           </TouchableOpacity>
         </View>
-        <ImageScreen />
+        <ScrollView>
+          <ImageScreen />
+        </ScrollView>
       </View>
     );
   }

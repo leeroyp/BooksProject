@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 
-function LibraryScreen({}) {
+const SearchScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Library Screen</Text>
+      <Text>Search Screen</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LibraryScreen;
+export default SearchScreen;

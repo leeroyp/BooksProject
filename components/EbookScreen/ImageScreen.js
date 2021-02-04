@@ -1,21 +1,26 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
-import ImageDetail from '../EbookScreen/ImageDetail';
+
+import ImageDetail from './ImageDetail';
 
 const ImageScreen = () => {
   return (
     <View>
       <ImageDetail
         title="Book"
-        imageSource={require('../assets/images/books.jpg')}
+        imageSource={require('../../assets/images/books.jpg')}
       />
       <ImageDetail
         title="Second Book"
-        imageSource={require('../assets/images/books.jpg')}
+        imageSource={require('../../assets/images/books.jpg')}
       />
       <ImageDetail
-        title="Third Book"
-        imageSource={require('../assets/images/books.jpg')}
+        title="Second Book"
+        imageSource={require('../../assets/images/books.jpg')}
+      />
+      <ImageDetail
+        title="Second Book"
+        imageSource={require('../../assets/images/books.jpg')}
       />
     </View>
   );

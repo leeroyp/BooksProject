@@ -3,9 +3,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import EbookScreen from '../screens/EbookScreen';
-import SearchScreen from '../../screens/SearchScreen';
-import LibraryScreen from '../../screens/LibraryScreen';
-import ProfileScreen from '../../screens/ProfileScreen';
+import SearchScreen from '../screens/SearchScreen';
+import LibraryScreen from '../screens/LibraryScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +26,6 @@ const AppStack = () => {
             iconName = focused ? 'person' : 'person';
           }
 
-          // You can return any component that you like here!
           return <Icon name={iconName} size={size} color={color} />;
         },
       })}

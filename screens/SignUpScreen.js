@@ -1,29 +1,30 @@
-import React, { useContext, useState } from 'react';
-import {View, Text , Button, StyleSheet, StatusBar, Platform, TextInput, TouchableOpacity, Touchable} from 'react-native';
-
+import React, {useContext} from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  StatusBar,
+  Platform,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
-import { AuthContext } from '../navigation/AuthProvider';
 
-const SignUpScreen  = ({navigation}) => {
+import {AuthContext} from '../navigation/AuthProvider';
+
+const SignUpScreen = () => {
   const [data, setData] = React.useState({
     email: '',
     password: '',
-    confirm_password:'',
+    confirm_password: '',
     check_textInputChange: false,
     secureTextEntry: true,
     confirm_secureTextEntry: true,
-
   });
-  
 
-  // ================================
-  // const [email,setEmail] = useState();
-  // const [password,setPassword] = useState()
-  // const [confirmPassword, setConfirm] =useState()
-
-  const {register} =useContext(AuthContext)
+  const {register} = useContext(AuthContext);
 
   const textInputChange = (val) => {
     if (val.length != 0) {
@@ -67,16 +68,13 @@ const SignUpScreen  = ({navigation}) => {
       confirm_secureTextEntry: !data.confirm_secureTextEntry,
     });
   };
-    return (
-      <View style={styles.container}>
-<StatusBar  backgroundColor='#009387' barStyle='light-content'/>
+  return (
+    <View style={styles.container}>
+      <StatusBar backgroundColor="#009387" barStyle="light-content" />
       <View style={styles.header}>
         <Text style={styles.text_header}>Register Now</Text>
       </View>
-      <View 
-        style={styles.footer}
-        animation="fadeInUpBig"
-      >
+      <View style={styles.footer} animation="fadeInUpBig">
         <Text style={styles.text_footer}>Email</Text>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#05375a" size={20} />
@@ -116,7 +114,10 @@ const SignUpScreen  = ({navigation}) => {
             )}
           </TouchableOpacity>
         </View>
-        <Text style={[styles.text_footer, {marginTop: 35}]}> Confirm Password</Text>
+        <Text style={[styles.text_footer, {marginTop: 35}]}>
+          {' '}
+          Confirm Password
+        </Text>
         <View style={styles.action}>
           <FontAwesome name="lock" color="#05375a" size={20} />
           <TextInput
@@ -136,19 +137,20 @@ const SignUpScreen  = ({navigation}) => {
         </View>
 
         <View style={styles.button}>
-          <TouchableOpacity
-          onPress={() => register (data.email,data.password)}>
-          <LinearGradient colors={['#08d4c4', '#01ab9d']} style={styles.signIn}>
-            <Text
-              style={[
-                styles.textSign,
-                {
-                  color: '#fff',
-                },
-              ]}>
-              Sign Up
-            </Text>
-          </LinearGradient>
+          <TouchableOpacity onPress={() => register(data.email, data.password)}>
+            <LinearGradient
+              colors={['#08d4c4', '#01ab9d']}
+              style={styles.signIn}>
+              <Text
+                style={[
+                  styles.textSign,
+                  {
+                    color: '#fff',
+                  },
+                ]}>
+                Sign Up
+              </Text>
+            </LinearGradient>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => register(data.email, data.password)}
@@ -173,76 +175,76 @@ const SignUpScreen  = ({navigation}) => {
         </View>
       </View>
     </View>
-    );
-  };
+  );
+};
 
-  export default SignUpScreen;
+export default SignUpScreen;
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#009387',
-    },
-    header: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      paddingHorizontal: 20,
-      paddingBottom: 50,
-    },
-    footer: {
-      flex: 3,
-      backgroundColor: '#fff',
-      borderTopLeftRadius: 30,
-      borderTopRightRadius: 30,
-      paddingHorizontal: 20,
-      paddingVertical: 30,
-    },
-    text_header: {
-      color: '#fff',
-      fontWeight: 'bold',
-      fontSize: 30,
-    },
-    text_footer: {
-      color: '#05375a',
-      fontSize: 18,
-    },
-    action: {
-      flexDirection: 'row',
-      marginTop: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#f2f2f2',
-      paddingBottom: 5,
-    },
-    actionError: {
-      flexDirection: 'row',
-      marginTop: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#FF0000',
-      paddingBottom: 5,
-    },
-    textInput: {
-      flex: 1,
-      marginTop: Platform.OS === 'ios' ? 0 : -12,
-      paddingLeft: 10,
-      color: '#05375a',
-    },
-    errorMsg: {
-      color: '#FF0000',
-      fontSize: 14,
-    },
-    button: {
-      alignItems: 'center',
-      marginTop: 50,
-    },
-    signIn: {
-      width: '100%',
-      height: 50,
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 10,
-    },
-    textSign: {
-      fontSize: 18,
-      fontWeight: 'bold',
-    },
-  });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#009387',
+  },
+  header: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    paddingHorizontal: 20,
+    paddingBottom: 50,
+  },
+  footer: {
+    flex: 3,
+    backgroundColor: '#fff',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 30,
+  },
+  text_header: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  text_footer: {
+    color: '#05375a',
+    fontSize: 18,
+  },
+  action: {
+    flexDirection: 'row',
+    marginTop: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f2f2f2',
+    paddingBottom: 5,
+  },
+  actionError: {
+    flexDirection: 'row',
+    marginTop: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#FF0000',
+    paddingBottom: 5,
+  },
+  textInput: {
+    flex: 1,
+    marginTop: Platform.OS === 'ios' ? 0 : -12,
+    paddingLeft: 10,
+    color: '#05375a',
+  },
+  errorMsg: {
+    color: '#FF0000',
+    fontSize: 14,
+  },
+  button: {
+    alignItems: 'center',
+    marginTop: 50,
+  },
+  signIn: {
+    width: '100%',
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
+  textSign: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});

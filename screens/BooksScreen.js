@@ -13,7 +13,7 @@ import ImageScreen from '../components/EbookScreen/ImageScreen';
 const Books = () => {
   const [state, setState] = useState(null);
   const [active, setActive] = useState(styles.active);
-  const [inactive, setInactive] = useState(styles.text);
+  const [inactive, setInactive] = useState(styles.inactive);
 
   function renderEbook() {
     setState(() => <ImageScreen />);
@@ -52,10 +52,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    backgroundColor: '#25ADB4',
   },
   header: {
-    margin: '15%',
+    marginTop: '20%',
+    marginBottom: '5%',
     color: 'black',
+    fontSize: 30,
   },
   innerContainer: {
     flexDirection: 'row',
@@ -68,22 +71,20 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray',
   },
   active: {
-    margin: 5,
+    margin: 10,
     color: 'black',
+    fontSize: 25,
     textAlign: 'center',
     backgroundColor: 'white',
+    borderRadius: 15,
   },
   inactive: {
-    margin: 5,
+    margin: 10,
     color: 'black',
+    fontSize: 25,
     textAlign: 'center',
     backgroundColor: 'gray',
   },
-  // text: {
-  //   margin: 5,
-  //   color: 'black',
-  //   textAlign: 'center',
-  // },
 });
 
 export default Books;

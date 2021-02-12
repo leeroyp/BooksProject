@@ -30,8 +30,9 @@ const AppStack = () => {
         },
       })}
       tabBarOptions={{
-        activeTintColor: 'blue',
-        inactiveTintColor: 'gray',
+        activeTintColor: '#FFFFFF',
+        inactiveTintColor: '#4D4D4D',
+        style: {backgroundColor: '#090909'},
       }}>
       <Tab.Screen name="Home" component={BooksScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />

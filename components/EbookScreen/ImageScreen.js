@@ -17,6 +17,13 @@ const ImageScreen = () => {
       <ImageDetail
         title="Second Book"
         imageSource={require('../../assets/images/books.jpg')}
+<<<<<<< HEAD
+=======
+      />
+      <ImageDetail
+        title="Second Book"
+        imageSource={require('../../assets/images/books.jpg')}
+>>>>>>> master
       />
       {/* <ImageDetail
         title="Second Book"

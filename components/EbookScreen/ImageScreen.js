@@ -18,10 +18,10 @@ const ImageScreen = () => {
         title="Second Book"
         imageSource={require('../../assets/images/books.jpg')}
       />
-      <ImageDetail
+      {/* <ImageDetail
         title="Second Book"
         imageSource={require('../../assets/images/books.jpg')}
-      />
+      /> */}
     </View>
   );
 };

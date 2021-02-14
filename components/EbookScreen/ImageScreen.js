@@ -7,28 +7,9 @@ const ImageScreen = () => {
   return (
     <View>
       <ImageDetail
-        title="Book"
+        title="Title"
         imageSource={require('../../assets/images/books.jpg')}
       />
-      <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
-      />
-      <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
-<<<<<<< HEAD
-=======
-      />
-      <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
->>>>>>> master
-      />
-      {/* <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
-      /> */}
     </View>
   );
 };

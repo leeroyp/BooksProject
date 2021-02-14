@@ -2,7 +2,7 @@ import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import EbookScreen from '../screens/EbookScreen';
+import BooksScreen from '../screens/BooksScreen';
 import SearchScreen from '../screens/SearchScreen';
 import LibraryScreen from '../screens/LibraryScreen';
 import ProfileScreen from '../screens/ProfileScreen';
@@ -30,10 +30,11 @@ const AppStack = () => {
         },
       })}
       tabBarOptions={{
-        activeTintColor: 'blue',
-        inactiveTintColor: 'gray',
+        activeTintColor: '#FFFFFF',
+        inactiveTintColor: '#4D4D4D',
+        style: {backgroundColor: '#090909'},
       }}>
-      <Tab.Screen name="Home" component={EbookScreen} />
+      <Tab.Screen name="Home" component={BooksScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />
       <Tab.Screen name="Library" component={LibraryScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

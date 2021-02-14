@@ -7,19 +7,7 @@ const ImageScreen = () => {
   return (
     <View>
       <ImageDetail
-        title="Book"
-        imageSource={require('../../assets/images/books.jpg')}
-      />
-      <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
-      />
-      <ImageDetail
-        title="Second Book"
-        imageSource={require('../../assets/images/books.jpg')}
-      />
-      <ImageDetail
-        title="Second Book"
+        title="Title"
         imageSource={require('../../assets/images/books.jpg')}
       />
     </View>

@@ -128,8 +128,8 @@ const SignInScreen = ({navigation}) => {
             </LinearGradient>
           </TouchableOpacity>
 
-          {/* <TouchableOpacity
-            onPress={() => login(data.email, data.password)}
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignUp')}
             style={[
               styles.signIn,
               {
@@ -145,9 +145,9 @@ const SignInScreen = ({navigation}) => {
                   color: '#009387',
                 },
               ]}>
-              Sign Up{' '}
+              Sign Up{''}
             </Text>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
       </View>
     </View>
